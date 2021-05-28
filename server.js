@@ -18,6 +18,15 @@ app.get("/", function (request, response) {
 });
 
 //START OF YOUR CODE...
+//Return all quotes
+app.get("/quotes", (req, res) => {
+  res.send(quotes)
+});
+
+//Return random quotes
+app.get("/quotes/random", (req, res) => {
+  res.send(pickFromArray(quotes))
+});
 
 //...END OF YOUR CODE
 
